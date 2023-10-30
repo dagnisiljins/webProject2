@@ -6,7 +6,7 @@ use Twig\Loader\FilesystemLoader;
 
 require 'vendor/autoload.php';
 
-$loader = new FilesystemLoader(__DIR__ . '/templates');
+$loader = new FilesystemLoader(__DIR__ . '/app/templates');
 $twig = new Environment($loader);
 
 $controller = new SiteController($twig);

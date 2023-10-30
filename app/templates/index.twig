@@ -51,6 +51,7 @@
 
 <div class="container text-center">
     <h1 class="display-4">Today's Top 3 News</h1>
+    <p>Current Time: {{ currentTime.format('H:i:s') }}</p>
     <ul class="list-group">
         {% for article in articles %}
             <li class="list-group-item">
@@ -58,6 +59,13 @@
             </li>
         {% endfor %}
     </ul>
+</div>
+<div class="container text-center">
+    <h2>Today's EUR exchange rates</h2>
+    <p>USD Exchange Rate: {{ convertRequest[0].getExchangeRate() }}</p>
+    <p>PLN Exchange Rate: {{ convertRequest[1].getExchangeRate() }}</p>
+    <p>GBP Exchange Rate: {{ convertRequest[2].getExchangeRate() }}</p>
+    <p>CAD Exchange Rate: {{ convertRequest[2].getExchangeRate() }}</p>
 </div>
 
 
