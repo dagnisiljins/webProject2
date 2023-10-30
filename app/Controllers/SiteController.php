@@ -43,7 +43,6 @@ class SiteController
 
     public function article($vars)
     {
-        // Fetch the article by ID or handle not found cases
         $id = $vars['id'];
         $articles = [
             1 => new Article(
@@ -62,7 +61,6 @@ class SiteController
             $template = $this->twig->load('article.twig');
             return $template->render(['article' => $article]);
         } else {
-            // Handle not found
             return 'Article not found';
         }
     }
