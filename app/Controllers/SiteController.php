@@ -23,16 +23,32 @@ class SiteController
     {
         $articlesData = [
             1 => [
-                'title' => 'Article 1',
-                'description' => 'Article description',
+                'title' => 'Sācies jauns posms karā Gazas joslā, pauž Izraēla',
+                'description' => '"Esam pārgājuši nākamajā kara posmā," paziņojumā Izraēlas sabiedrībai teica ministrs.
+
+            "Vakar vakarā Gazā drebēja zeme. Mēs uzbrukām uz zemes un zem zemes," viņš paskaidroja, piebilstot, ka "rīkojumi spēkiem ir skaidri. Kampaņa turpināsies līdz turpmākai informācijai".
+
+            Galants sacīja, ka ir paplašināta sauszemes operācija Gazā, nosūtot tur tankus un kājniekus, kurus atbalsta plaši gaisa triecieni no aviācijas un jūras spēkiem.
+
+            Izraēlas armija sestdien brīdināja, ka Gazas pilsēta ir kaujas lauks un "patvertnes Gazas joslas ziemeļos un Gazas pilsētā nav drošas". No iznīcinātājiem izmestajās skrejlapās izteikts aicinājums civiliedzīvotājiem "nekavējoties evakuēties" uz Gazas joslas dienvidiem.
+
+            Pirms trim nedēļām, kad sākās karš, Izaēla sapulcināja tūkstošiem karavīru pie Gazas joslas robežas. Līdz šim tie veica īsus nakts reidus Gazā un atgriezās atpakaļ Izraēlā.
+
+            Izraēla uzstāj, ka veic triecienus "Hamās" kaujinieku mērķiem un infrastruktūrai, atbildot uz 7.oktobrī notikušo uzbrukumu, kad "Hamās" Izraēlā nogalināja vairāk nekā 1400 cilvēku un saņēma gūstā vairāk nekā 220 cilvēku.
+
+            Tikmēr Gazas joslā valdošā "Hamās" varasiestādes paziņojušas, ka trīs nedēļas ilgušajos Izraēlas uzlidojumos nogalināti vairāk nekā 7700 cilvēku, bet vēl 1700 cilvēku atrodas zem gruvešiem.
+
+            Veselības aprūpes sistēmu Gazas joslā paralizē sakaru un elektrības atslēgšana.',
             ],
             2 => [
-                'title' => 'Article 2',
-                'description' => 'Article description',
+                'title' => 'Cehs.lv: Kā pārdevējs Pītersons Arēnā atnaudoja konservatīvos',
+                'description' => 'Par Džordanu Pītersonu, protams, biju dzirdējis daudz. Pat tik daudz, lai viņu kategorizētu kā "kārtējais čalis, kas ar saviem hot-takes tracina tītaru fermu". Ja tu šo lasi, nezinot par Pītersonu, tad iztēlojies Viesturu Rudzīti ar daudz izsmalcinātāku gaumi. Nevar noliegt, ka viņš ir harizmātisks orators britiem tipiskā debašu dueļu kultūrā.
+            Savulaik biju ļoti iemīļojis Kristoferu Hitčinsu, kurš ar ļoti izkoptu un literāru valodu spēja savīt savu viedokli tik asā pātagā, ka viņa pretinieki apklusa, bet tūkstošiem "adjutantu" vienojās gavilēs. Tālab nevaru noliegt, ka biju patīkami satraukts par iespēju apmeklēt Pītersona lekciju, jo tā bija iespēja beidzot formulēt savu viedokli par viņu, viņa vēstījumu un viņa faniem.',
             ],
             3 => [
-                'title' => 'Title 3',
-                'description' => 'Article description',
+                'title' => 'Noslēgusies Elemental Business Centre būvniecība',
+                'description' => '"Elemental Business Centre" būvnieks "Merks" nodevis biroju ēku kompleksu attīstītājam "Kapitel", tādējādi noslēdzot būvniecības posmu, kas tika uzsākts 2021. gada septembrī. Projekta kopējās investīcijas pārsniedz 60 miljonus, un tas sastāv no divām ēkām ar 21 000 m2 kopējo iznomājamo platību.
+            Pirmie nomnieki darbu "Elemental Business Centre" sāks jau oktobra beigās.',
             ],
         ];
 
