@@ -19,12 +19,36 @@ class SiteController
         $this->twig = $twig;
     }
 
+    private function createArticle($id)
+    {
+        $articlesData = [
+            1 => [
+                'title' => 'Article 1',
+                'description' => 'Article description',
+            ],
+            2 => [
+                'title' => 'Article 2',
+                'description' => 'Article description',
+            ],
+            3 => [
+                'title' => 'Title 3',
+                'description' => 'Article description',
+            ],
+        ];
+
+        if (isset($articlesData[$id])) {
+            $data = $articlesData[$id];
+            return new Article($data['title'], $data['description'], $id);
+        }
+
+        return null;
+    }
     public function index()
     {
         $articles = [
-            new Article('Title 1', 'Pirmā article apraksts', 1),
-            new Article('Title 2', 'Otrā article apraksts', 2),
-            new Article('Title 3', 'Trešā article apraksts', 3)
+            $this->createArticle(1),
+            $this->createArticle(2),
+            $this->createArticle(3)
         ];
 
         $url = 'http://api.exchangeratesapi.io/v1/latest?access_key=4755858ee8f52d30b1b91c8d9c04a098';
@@ -36,7 +60,7 @@ class SiteController
             new ExchangeRate($data->rates->CAD)
         ];
 
-        $currentTime = Carbon::now();
+        $currentTime = Carbon::now("Europe/Riga");
 
         return new Response($this->twig, 'index.twig', [
             'articles' => $articles,
@@ -47,20 +71,8 @@ class SiteController
 
     public function article($vars)
     {
-        $id = $vars['id'];
-        $articles = [
-            1 => new Article(
-                'Article 1',
-                'Article description',
-                1),
-            2 => new Article(
-                'Article 2',
-                'Article description',
-                2),
-            3 => new Article('Title 3', 'Article description', 3)
-        ];
-
-        $article = $articles[$id];
+        $id = (int)$vars['id'];
+        $article = $this->createArticle($id);
 
         return new Response($this->twig, 'article.twig', ['article' => $article]);
     }
