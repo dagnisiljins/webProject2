@@ -8,6 +8,7 @@ use App\Models\ExchangeRate;
 use App\Models\Article;
 use Twig\Environment;
 use Carbon\Carbon;
+use App\Response;
 
 class SiteController
 {
@@ -36,9 +37,12 @@ class SiteController
         ];
 
         $currentTime = Carbon::now();
-        $template = $this->twig->load('index.twig');
 
-        return $template->render(['articles' => $articles, 'currentTime' => $currentTime, 'convertRequest' => $convertRequest]);
+        return new Response($this->twig, 'index.twig', [
+            'articles' => $articles,
+            'currentTime' => $currentTime,
+            'convertRequest' => $convertRequest,
+        ]);
     }
 
     public function article($vars)
@@ -56,12 +60,8 @@ class SiteController
             3 => new Article('Title 3', 'Article description', 3)
         ];
 
-        if (isset($articles[$id])) {
-            $article = $articles[$id];
-            $template = $this->twig->load('article.twig');
-            return $template->render(['article' => $article]);
-        } else {
-            return 'Article not found';
-        }
+        $article = $articles[$id];
+
+        return new Response($this->twig, 'article.twig', ['article' => $article]);
     }
 }

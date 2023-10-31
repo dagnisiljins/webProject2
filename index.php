@@ -41,7 +41,7 @@ switch ($routeInfo[0]) {
 
         $response = $controller->{$method}($vars);
 
-        echo $response;
+        echo $response->render();
 
         break;
 }
